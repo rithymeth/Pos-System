@@ -1,0 +1,29 @@
+{
+  "name": "app-back-end",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "@quasar/extras": "^1.13.1",
+    "buffer": "^6.0.3",
+    "meteor-node-stubs": "^1.1.0",
+    "moment": "^2.29.3",
+    "print-js": "^1.6.0",
+    "quasar": "^1.18.6",
+    "vue": "^2.6.14",
+    "vue-meteor-tracker": "^2.0.0-beta.5",
+    "vue-router": "^3.5.3"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}
